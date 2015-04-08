@@ -1,0 +1,32 @@
+// click to add more rain
+
+// position of the rain at top
+var xPositions = [1, 50, 100, 150, 200, 250, 300, 350, 399];
+var yPositions = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var rainspeed = [1, 4, 2, 6, 3, 8, 5, 3, 4];
+
+// rain falling from top to bottom at defined intervals
+var draw = function() {
+    background(113, 218, 237);
+
+    for (var i = 0; i < xPositions.length; i++) {
+        noStroke();
+        fill(60, 163, 232);
+        ellipse(xPositions[i], yPositions[i], 6, 12);
+    if (yPositions[i] < 395) {
+        yPositions[i] += rainspeed[i]; //makes rain fall down
+    } else {
+        yPositions[i] = 0; //takes rain back to top
+    }
+    }
+        
+};
+
+
+// click to add more raindrops
+var mouseClicked = function() {
+    xPositions.push(mouseX);
+    yPositions.push(mouseY);
+    rainspeed.push(random(2,8));
+};
+
