@@ -1,0 +1,53 @@
+background(129, 88, 240);
+noStroke ();
+
+//igloo
+fill(255, 255, 255);
+ellipse(50, 150, 200, 200);
+
+fill(129, 88, 240);
+ellipse(70, 150, 80, 80);
+
+//snow
+fill(255, 255, 255);
+rect(0, 150, 400, 300);
+
+//penquin body
+
+fill(47, 10, 128);
+ellipse(250, 200, 180, 208); //outer
+
+fill(62, 16, 168);
+ellipse(250, 200, 150, 208); //inner
+
+
+//penquin head
+
+fill(62, 16, 168);
+ellipse(250, 100, 120, 120); //outer
+
+fill(255, 255, 255);
+ellipse(250, 200, 130, 208); //tummy
+
+fill(255, 255, 255);
+ellipse(227, 94, 50, 50); //left eye
+
+fill(255, 255, 255);
+ellipse(274, 94, 50, 50); //right eye
+
+fill(0, 0, 0);
+ellipse(227, 94, 10, 10); //left pupil
+
+fill(0, 0, 0);
+ellipse(274, 94, 10, 10); //right pupil
+
+fill(232, 96, 28);
+triangle(230, 110, 270, 110, 250, 150); //beak
+
+fill(232, 96, 28);
+triangle(155, 320, 220, 280, 220, 320); //left foot
+
+fill(232, 96, 28);
+triangle(350, 320, 280, 280, 280, 320);
+
+
