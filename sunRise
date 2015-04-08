@@ -1,0 +1,67 @@
+//watch the sun rise!
+
+background(5, 61, 61);
+
+//sunrise
+var sun = 200;
+var rise = 200;
+
+var draw = function() {
+    if (sun < 250) {
+        background(5, 61, 61);
+    } else if (sun < 275) {
+        background(15, 82, 82);
+    } else if (sun < 300) {
+        background(87, 100, 166);
+    } else if (sun < 325) {
+        background(90, 107, 204);
+    } else {
+        background(116, 133, 242);
+    }
+    fill(239, 250, 35);
+    if(sun < 350 & rise > 50) {
+        ellipse(sun, rise, 75, 75); 
+        sun ++;
+        rise -= 1;
+    } else {
+        ellipse(350, 50, 75, 75);
+    }
+    
+    fill(69, 51, 19); //roof
+triangle(200, 28, 350, 150, 50, 150);
+
+fill(255, 255, 255); //house
+rect(60, 150, 280, 207);
+
+for (var siding = 61; siding < 300; siding += 34) {
+    var wood = getImage("cute/WoodBlock");
+    for (var y = 31; y < 40; y += 41) {
+    image(wood, siding, y, 41, 410);
+    }
+}
+
+fill(240, 12, 46); //door
+rect(180, 280, 40, 77);
+fill(0,0,0);
+ellipse(188, 320, 5, 5);
+
+for (var window = 95; window < 300; window += 80){
+    stroke(0, 0, 0);
+    fill(245, 245, 155);
+    rect(window, 170, 50, 75);
+    line(window, 210, window + 50, 210);
+    line(window + 25, 170, window + 25, 245);
+}
+
+for (var grass = 0; grass < 400; grass +=50) {
+    var grassImage = getImage("cute/GrassBlock");
+    image(grassImage, grass, 330, 100, 100);
+}
+    
+    };
+    
+
+
+
+
+
