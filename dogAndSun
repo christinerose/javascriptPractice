@@ -1,0 +1,43 @@
+var bodyX = 200;
+var bodyY = 250;
+var bodyW = 125;
+var bodyH = bodyW * 1.5;
+var eyeSize = bodyW/14;
+var tongue = bodyW/10;
+var sunSize = 10;
+var tailSize = 483;
+
+draw = function() {
+    background(207, 254, 255);
+    
+    //sunrise
+    fill(237, 145, 59);
+    ellipse(200, 300, sunSize, sunSize);
+    sunSize ++;
+    
+    stroke(0, 0, 0);
+    fill(148, 127, 24);
+    arc(256, 196, 25, 207, tailSize, 507); //tail 
+    tailSize --;
+    
+    ellipse(bodyX, bodyY, bodyW, bodyH); // body
+    ellipse(bodyX, bodyY-90, bodyW/1.5, bodyH/2.5); // head
+    ellipse(bodyX-14, bodyY-93, bodyW/6, bodyH/8); //lt eye
+    ellipse(bodyX+14, bodyY-93, bodyW/6, bodyH/8); //rt eye
+    ellipse(bodyX-16, bodyY-65, bodyW/4, bodyH/4); //rt jowl
+    ellipse(bodyX+16, bodyY-65, bodyW/4, bodyH/4); //lf jowl
+    triangle(bodyX/1.5, bodyY/1.5, bodyX*0.84, bodyY*0.65, bodyX*0.85, bodyY/2); //left ear
+    triangle(bodyX/0.85, bodyY/1.5, bodyX*1.35, bodyY*0.65, bodyX*1.12, bodyY/2); //right ear
+    
+    fill(0, 0, 0);
+    ellipse(bodyX, bodyY-78, bodyW/6, bodyH/10); //nose
+    ellipse(bodyX-14, bodyY-93, eyeSize, eyeSize); //pupil right
+    ellipse(bodyX+14, bodyY-93, eyeSize, eyeSize); //pupil left
+    
+    fill(235, 77, 77);
+    ellipse(bodyX, bodyY-50, tongue, tongue*2.5); //tongue
+    
+    noStroke();
+    fill(14, 64, 29);
+    rect(0, 300, 400, 150); //grass
+};
